@@ -28,7 +28,7 @@ chooseRecursive n k
       b <- chooseRecursive (n - 1) k
       Just $ a + b
 
--- O(n^2)
+-- O(nk)
 chooseDP :: Int -> Int -> Maybe Int
 chooseDP n k
   | n < 0 || k < 0 = Nothing
@@ -40,14 +40,16 @@ chooseDP n k
     dp = array (0, n) [(i, createRow i) | i <- [0 .. n]]
 
     createRow 0 = array (0, 1) [(0, 1)]
-    createRow n' = array (0, n') [(i, calcBinom n' i) | i <- [0 .. n']]
+    createRow n' =
+      let colSize = min n' k
+      in array (0, colSize) [(i, calcBinom n' i) | i <- [0 .. colSize]]
 
     calcBinom n' k'
       | k' == 0 = 1
       | k' == n' = 1
       | otherwise = let l = (dp ! (n' - 1)) in (l ! k') + (l ! (k' - 1))
 
--- O(n^2)
+-- O(nk)
 chooseDPFast :: Int -> Int -> Maybe Int
 chooseDPFast n k
   | n < 0 || k < 0 = Nothing
@@ -58,12 +60,12 @@ chooseDPFast n k
   | otherwise = Just $ dp !! n !! k
   where
     -- DP table implemented as a 2D, lazy list. (n choose k) corresponds to the
-    -- n-th row and k-th column in the table.
+    -- n-th row and k-th column in the table. Each row is an infinite, lazy list.
     --
     -- Since each row is evaluated and accessed only once in sequential order,
     -- the GC may collect already used rows efficiently.
     dp :: [[Int]]
-    dp = (1 : replicate n 0) : buildDP dp
+    dp = (1 : repeat 0) : buildDP dp
     buildDP (prevRow : rows) = zipWith (+) prevRow (0 : prevRow) : buildDP rows
 
 -- O(n)
