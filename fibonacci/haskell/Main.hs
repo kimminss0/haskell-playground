@@ -23,7 +23,7 @@ fibs = 0 : 1 : zipWith (+) fibs (drop 1 fibs)
 fib1 :: Int -> Int
 fib1 n = fibs !! n
 
--- Lazy-evaluated function arguments lead to poor performance. as the thunk,
+-- Lazy-evaluated function arguments lead to poor performance, as the thunk,
 -- an unevaluated expression that can be represented as a deep tree, grows
 -- and becomes increasingly complex, allocating a lot of memory in the heap,
 -- which may result in many cache misses when it is finally evaluated.

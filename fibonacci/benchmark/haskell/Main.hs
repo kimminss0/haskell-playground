@@ -1,10 +1,10 @@
 module Main where
 
 import Data.Maybe (listToMaybe)
+import Data.Word (Word64)
 import System.Environment (getArgs)
 import System.Exit (exitFailure)
 import Text.Read (readMaybe)
-import Data.Word (Word64)
 
 main :: IO ()
 main = do
@@ -21,4 +21,3 @@ fib n = fib' n 0 1
     fib' 0 !a !_ = a
     fib' !k !a !b = fib' (k - 1) (b `mod` m) ((a + b) `mod` m)
     m = 18446744073709551557 :: Word64
-

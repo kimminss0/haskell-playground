@@ -42,7 +42,7 @@ chooseDP n k
     createRow 0 = array (0, 1) [(0, 1)]
     createRow n' =
       let colSize = min n' k
-      in array (0, colSize) [(i, calcBinom n' i) | i <- [0 .. colSize]]
+       in array (0, colSize) [(i, calcBinom n' i) | i <- [0 .. colSize]]
 
     calcBinom n' k'
       | k' == 0 = 1
