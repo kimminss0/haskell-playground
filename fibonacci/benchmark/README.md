@@ -1,8 +1,9 @@
 # Benchmark
 
-Calculate the 10,000,000,000th Fibonacci number, modulo 18,446,744,073,709,551,557[^1].
+Calculate the 1,000,000,000th Fibonacci number, modulo 4,294,967,295[^1].
 
-[^1]: The largest unsigned 64 bit prime number. [Reference](https://www.mersenneforum.org/node/2899?p=62781#post62781).
+[^1]: The largest unsigned 32 bit prime number.
+    [Reference](https://en.wikipedia.org/wiki/4,294,967,295).
 
 ## Environment
 
@@ -58,14 +59,14 @@ The results are the mean of 5 executions.
 
 |Language|Execution Time (ms)|
 |--------|------------------|
-|C++|8.65|
-|Haskell (LLVM Backend)|8.74|
-|Haskell|38.18|
+|C++|2.30|
+|Haskell (LLVM Backend)|2.31|
+|Haskell|3.86|
 
 ### FreeBSD, AMD64
 
 |Language|Execution Time (ms)|
 |--------|------------------|
-|C++|7.53|
-|Haskell (LLVM Backend)|7.54|
-|Haskell|7.54|
+|C++|2.26|
+|Haskell (LLVM Backend)|2.27|
+|Haskell|2.27|

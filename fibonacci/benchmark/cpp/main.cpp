@@ -5,7 +5,7 @@
 uint64_t fib(long long);
 uint64_t fib1(long long, uint64_t, uint64_t);
 
-const uint64_t mod = 18446744073709551557UL;
+const uint64_t m = 4294967295UL;
 
 int main(int argc, char *argv[]) {
   if (argc < 2)
@@ -26,7 +26,7 @@ uint64_t fib1(long long c, uint64_t a, uint64_t b) {
   if (c == 1)
     return b;
   // C++ supports tail call optimization.
-  return fib1(c - 1, b % mod, (a + b) % mod);
+  return fib1(c - 1, b % m, (a + b) % m);
 }
 
 
