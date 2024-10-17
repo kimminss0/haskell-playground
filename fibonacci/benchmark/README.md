@@ -39,7 +39,7 @@ Tested on two environments:
 - **Compiler**
   - **clang++**
     - **Language**: C++
-    - **Version**: 16.0.6
+    - **Version**: 18.1.5
     - **Options**: `-O2`
   - **GHC**: 
     - **Language**: Haskell
@@ -130,3 +130,4 @@ The results are the mean of 5 executions.
 |C++ (g++)|2.40|
 |Haskell (GHC, LLVM Backend)|2.40|
 |Haskell (GHC)|7.44|
+
