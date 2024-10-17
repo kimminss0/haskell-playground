@@ -78,24 +78,24 @@ The results are the mean of 5 executions.
 
 ### MacOS, AArch64
 
-|Language|Execution Time (ms)|
+|Language (Compiler Used)|Execution Time (ms)|
 |--------|------------------|
-|C++|2.30|
-|Haskell (LLVM Backend)|2.31|
-|Haskell|3.86|
+|C++ (clang++)|2.30|
+|Haskell (GHC, LLVM Backend)|2.31|
+|Haskell (GHC)|3.86|
 
 ### FreeBSD, AMD64
 
-|Language|Execution Time (ms)|
+|Language (Compiler Used)|Execution Time (ms)|
 |--------|------------------|
-|C++|2.26|
-|Haskell (LLVM Backend)|2.27|
-|Haskell|2.27|
+|C++ (clang++)|2.26|
+|Haskell (GHC, LLVM Backend)|2.27|
+|Haskell (GHC)|2.27|
 
 ### Linux, AMD64
 
 |Language|Execution Time (ms)|
 |--------|------------------|
-|C++|2.40|
-|Haskell (LLVM Backend)|2.40|
-|Haskell|7.44|
+|C++ (g++)|2.40|
+|Haskell (GHC, LLVM Backend)|2.40|
+|Haskell (GHC)|7.44|
