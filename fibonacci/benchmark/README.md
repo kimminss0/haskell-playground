@@ -5,11 +5,13 @@ Calculate the 1,000,000,000th Fibonacci number, modulo 4,294,967,295[^1].
 [^1]: The largest unsigned 32 bit prime number.
     [Reference](https://en.wikipedia.org/wiki/4,294,967,295).
 
-## Environment
+Tested on four environments. The results are the mean of 5 executions.
 
-Tested on two environments:
+## Environemnt
 
-### MacOS, AArch64
+Tested on four environments.
+
+### MacOS, AArch64 (Apple M2, 24 GB RAM)
 
 - **OS**: MacOS 15.0 (Darwin Kernel 24.0.0)
 - **Processor**: Apple M2
@@ -30,7 +32,7 @@ Tested on two environments:
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
 
-### FreeBSD, AMD64 - 1
+### FreeBSD, AMD64 (Ryzen 5 PRO 4650U, 32 GB RAM)
 
 - **OS**: FreeBSD 14.1-RELEASE
 - **Processor**: AMD Ryzen 5 PRO 4650U
@@ -51,7 +53,7 @@ Tested on two environments:
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
 
-### FreeBSD, AMD64 - 2
+### FreeBSD, AMD64 (Ryzen 7 PRO 2700U, 8 GB RAM)
 
 - **OS**: FreeBSD 14.1-RELEASE
 - **Processor**: AMD Ryzen 7 PRO 2700U
@@ -72,8 +74,7 @@ Tested on two environments:
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
 
-
-### Linux, AMD64
+### Linux, AMD64 (Ryzen 7 PRO 2700U, 8 GB RAM)
 
 - **OS**: Fedora 40 (Linux Kernel 6.8.5)
 - **Processor**: AMD Ryzen 7 PRO 2700U
@@ -98,35 +99,34 @@ Tested on two environments:
 
 The results are the mean of 5 executions.
 
-### MacOS, AArch64
+### MacOS, AArch64 (Apple M2, 24 GB RAM)
 
 |Language (Compiler Used)|Execution Time (ms)|
-|--------|------------------|
+|------------------------|-------------------|
 |C++ (clang++)|2.30|
 |Haskell (GHC, LLVM Backend)|2.31|
 |Haskell (GHC)|3.86|
 
-### FreeBSD, AMD64 - 1
+### FreeBSD, AMD64 (Ryzen 5 PRO 4650U, 32 GB RAM)
 
 |Language (Compiler Used)|Execution Time (ms)|
-|--------|------------------|
+|------------------------|-------------------|
 |C++ (clang++)|2.26|
 |Haskell (GHC, LLVM Backend)|2.27|
 |Haskell (GHC)|2.27|
 
-
-### FreeBSD, AMD64 - 2
+### FreeBSD, AMD64 (Ryzen 7 PRO 2700U, 8 GB RAM)
 
 |Language (Compiler Used)|Execution Time (ms)|
-|--------|------------------|
+|------------------------|-------------------|
 |C++ (clang++)|2.39|
 |Haskell (GHC, LLVM Backend)|2.40|
 |Haskell (GHC)|7.44|
 
-### Linux, AMD64
+### Linux, AMD64 (Ryzen 7 PRO 2700U, 8 GB RAM)
 
-|Language|Execution Time (ms)|
-|--------|------------------|
+|Language (Compiler Used)|Execution Time (ms)|
+|------------------------|-------------------|
 |C++ (g++)|2.40|
 |Haskell (GHC, LLVM Backend)|2.40|
 |Haskell (GHC)|7.44|
