@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <exception>
 #include <iostream>
 #include <string>
@@ -28,5 +29,3 @@ uint64_t fib1(long long c, uint64_t a, uint64_t b) {
   // C++ supports tail call optimization.
   return fib1(c - 1, b % m, (a + b) % m);
 }
-
-

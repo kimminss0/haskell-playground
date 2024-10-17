@@ -11,7 +11,7 @@ Tested on two environments:
 
 ### MacOS, AArch64
 
-- **OS**: MacOS 15.0, Darwin Kernel Version 24.0.0
+- **OS**: MacOS 15.0 (Darwin Kernel 24.0.0)
 - **Processor**: Apple M2
 - **Architecture**: AArch64
 - **RAM**: 24 GB
@@ -19,15 +19,15 @@ Tested on two environments:
   - **clang++**
     - **Language**: C++
     - **Version**: 16.0.0
-    - **Options**: -O2
+    - **Options**: `-O2`
   - **GHC**: 
     - **Language**: Haskell
     - **Version**: 9.4.8
-    - **Options**: -O2
+    - **Options**: `-O2`
   - **GHC (LLVM Backend)**: 
     - **Language**: Haskell
     - **Version**: 9.4.8
-    - **Options**: -O2 -fllvm
+    - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
 
 ### FreeBSD, AMD64
@@ -40,16 +40,37 @@ Tested on two environments:
   - **clang++**
     - **Language**: C++
     - **Version**: 16.0.6
-    - **Options**: -O2
+    - **Options**: `-O2`
   - **GHC**: 
     - **Language**: Haskell
     - **Version**: 9.4.8
-    - **Options**: -O2
+    - **Options**: `-O2`
   - **GHC (LLVM Backend)**: 
     - **Language**: Haskell
     - **Version**: 9.4.8
-    - **Options**: -O2 -fllvm
+    - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
+
+### Linux, AMD64
+
+- **OS**: Fedora 40 (Linux Kernel 6.8.5)
+- **Processor**: AMD Ryzen 7 PRO 2700U
+- **Architecture**: AMD64
+- **RAM**: 8 GB
+- **Compiler**
+  - **g++**
+    - **Language**: C++
+    - **Version**: 14.0.1
+    - **Options**: `-O2`
+  - **GHC**: 
+    - **Language**: Haskell
+    - **Version**: 9.4.8
+    - **Options**: `-O2`
+  - **GHC (LLVM Backend)**: 
+    - **Language**: Haskell
+    - **Version**: 9.4.8
+    - **Options**: `-O2 -fllvm`
+    - **Note**: Uses LLVM backend (version 14.0.5)
 
 ## Result
 
@@ -70,3 +91,11 @@ The results are the mean of 5 executions.
 |C++|2.26|
 |Haskell (LLVM Backend)|2.27|
 |Haskell|2.27|
+
+### Linux, AMD64
+
+|Language|Execution Time (ms)|
+|--------|------------------|
+|C++|2.40|
+|Haskell (LLVM Backend)|2.40|
+|Haskell|7.44|
