@@ -5,8 +5,6 @@ Calculate the 1,000,000,000th Fibonacci number, modulo 4,294,967,295[^1].
 [^1]: The largest unsigned 32 bit prime number.
     [Reference](https://en.wikipedia.org/wiki/4,294,967,295).
 
-Tested on four environments. The results are the mean of 5 executions.
-
 ## Environemnt
 
 Tested on four environments.
@@ -19,15 +17,12 @@ Tested on four environments.
 - **RAM**: 24 GB
 - **Compiler**
   - **clang++**
-    - **Language**: C++
     - **Version**: 16.0.0
     - **Options**: `-O2`
   - **GHC**: 
-    - **Language**: Haskell
     - **Version**: 9.4.8
     - **Options**: `-O2`
   - **GHC (LLVM Backend)**: 
-    - **Language**: Haskell
     - **Version**: 9.4.8
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
@@ -40,15 +35,12 @@ Tested on four environments.
 - **RAM**: 32 GB
 - **Compiler**
   - **clang++**
-    - **Language**: C++
     - **Version**: 18.1.5
     - **Options**: `-O2`
   - **GHC**: 
-    - **Language**: Haskell
     - **Version**: 9.4.8
     - **Options**: `-O2`
   - **GHC (LLVM Backend)**: 
-    - **Language**: Haskell
     - **Version**: 9.4.8
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
@@ -61,15 +53,12 @@ Tested on four environments.
 - **RAM**: 8 GB
 - **Compiler**
   - **clang++**
-    - **Language**: C++
     - **Version**: 18.1.5
     - **Options**: `-O2`
   - **GHC**: 
-    - **Language**: Haskell
     - **Version**: 9.4.8
     - **Options**: `-O2`
   - **GHC (LLVM Backend)**: 
-    - **Language**: Haskell
     - **Version**: 9.4.8
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
@@ -82,15 +71,12 @@ Tested on four environments.
 - **RAM**: 8 GB
 - **Compiler**
   - **g++**
-    - **Language**: C++
     - **Version**: 14.0.1
     - **Options**: `-O2`
   - **GHC**: 
-    - **Language**: Haskell
     - **Version**: 9.4.8
     - **Options**: `-O2`
   - **GHC (LLVM Backend)**: 
-    - **Language**: Haskell
     - **Version**: 9.4.8
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.5)
