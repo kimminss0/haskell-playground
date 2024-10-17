@@ -30,7 +30,7 @@ Tested on two environments:
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
 
-### FreeBSD, AMD64
+### FreeBSD, AMD64 - 1
 
 - **OS**: FreeBSD 14.1-RELEASE
 - **Processor**: AMD Ryzen 5 PRO 4650U
@@ -50,6 +50,28 @@ Tested on two environments:
     - **Version**: 9.4.8
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
+
+### FreeBSD, AMD64 - 2
+
+- **OS**: FreeBSD 14.1-RELEASE
+- **Processor**: AMD Ryzen 7 PRO 2700U
+- **Architecture**: AMD64
+- **RAM**: 8 GB
+- **Compiler**
+  - **clang++**
+    - **Language**: C++
+    - **Version**: 18.1.5
+    - **Options**: `-O2`
+  - **GHC**: 
+    - **Language**: Haskell
+    - **Version**: 9.4.8
+    - **Options**: `-O2`
+  - **GHC (LLVM Backend)**: 
+    - **Language**: Haskell
+    - **Version**: 9.4.8
+    - **Options**: `-O2 -fllvm`
+    - **Note**: Uses LLVM backend (version 14.0.6)
+
 
 ### Linux, AMD64
 
@@ -84,13 +106,22 @@ The results are the mean of 5 executions.
 |Haskell (GHC, LLVM Backend)|2.31|
 |Haskell (GHC)|3.86|
 
-### FreeBSD, AMD64
+### FreeBSD, AMD64 - 1
 
 |Language (Compiler Used)|Execution Time (ms)|
 |--------|------------------|
 |C++ (clang++)|2.26|
 |Haskell (GHC, LLVM Backend)|2.27|
 |Haskell (GHC)|2.27|
+
+
+### FreeBSD, AMD64 - 2
+
+|Language (Compiler Used)|Execution Time (ms)|
+|--------|------------------|
+|C++ (clang++)|2.39|
+|Haskell (GHC, LLVM Backend)|2.40|
+|Haskell (GHC)|7.44|
 
 ### Linux, AMD64
 
