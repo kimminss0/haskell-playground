@@ -1,6 +1,5 @@
 module Main where
 
-import Data.Maybe (listToMaybe)
 import System.Environment (getArgs)
 import System.Exit (exitFailure)
 import Text.Read (readMaybe)
@@ -8,10 +7,23 @@ import Text.Read (readMaybe)
 main :: IO ()
 main = do
   args <- getArgs
-  let num = readMaybe =<< listToMaybe args
-  case num of
-    Just num' -> print $ fib3 num'
+  case parseArgs args of
+    Just (num, fib) -> print $ fib num
     Nothing -> exitFailure
+  where
+    parseArgs :: [String] -> Maybe (Int, Int -> Int)
+    parseArgs [a1, a2] = do
+      num <- readMaybe a1
+      sel <- readMaybe a2
+      fib <- fibWith sel
+      Just (num, fib)
+    parseArgs _ = Nothing
+
+    fibWith :: Int -> Maybe (Int -> Int)
+    fibWith 1 = Just fib1
+    fibWith 2 = Just fib2
+    fibWith 3 = Just fib3
+    fibWith _ = Nothing
 
 -- Elegant example demonstrating the nature of Haskell's lazy evaluation.
 fibs :: [Int]
