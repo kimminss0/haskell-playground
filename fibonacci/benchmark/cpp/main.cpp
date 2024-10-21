@@ -26,6 +26,6 @@ uint64_t fib(long long num) { return fib1(num, 0, 1); }
 uint64_t fib1(long long c, uint64_t a, uint64_t b) {
   if (c == 1)
     return b;
-  // C++ supports tail call optimization.
+  // Tail call optimization may performed by the compiler
   return fib1(c - 1, b % m, (a + b) % m);
 }

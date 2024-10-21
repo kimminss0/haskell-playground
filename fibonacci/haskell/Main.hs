@@ -35,18 +35,18 @@ fibs = 0 : 1 : zipWith (+) fibs (drop 1 fibs)
 fib1 :: Int -> Int
 fib1 n = fibs !! n
 
--- Lazy-evaluated function arguments lead to poor performance, as the thunk,
--- an unevaluated expression that can be represented as a deep tree, grows
--- and becomes increasingly complex, allocating a lot of memory in the heap,
--- which may result in many cache misses when it is finally evaluated.
+-- Lazy-evaluated function arguments lead to poor performance, as the thunk, an
+-- unevaluated expression that can be represented as a deep tree, grows and
+-- becomes increasingly complex, allocating a lot of memory in the heap, which
+-- may result in many cache misses when it is finally evaluated.
 fib2 :: Int -> Int
 fib2 n = fib' n 0 1
   where
     fib' 0 a _ = a
     fib' k a b = fib' (k - 1) b (a + b)
 
--- Strictness improves performance because lazy evaluation is not beneficial here,
--- notably resulting in poor performance.
+-- Strictness improves performance because lazy evaluation is not beneficial
+-- here, notably resulting in poor performance.
 fib3 :: Int -> Int
 fib3 n = fib' n 0 1
   where
