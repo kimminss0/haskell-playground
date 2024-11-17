@@ -5,7 +5,7 @@ Calculate the 1,000,000,000th Fibonacci number, modulo 4,294,967,295[^1].
 [^1]: The largest unsigned 32 bit prime number.
     [Reference](https://en.wikipedia.org/wiki/4,294,967,295).
 
-## Environemnt
+## Environment
 
 Tested on four environments.
 
@@ -19,10 +19,10 @@ Tested on four environments.
   - **clang++**
     - **Version**: 16.0.0
     - **Options**: `-O2`
-  - **GHC**: 
+  - **GHC**:
     - **Version**: 9.4.8
     - **Options**: `-O2`
-  - **GHC (LLVM Backend)**: 
+  - **GHC (LLVM Backend)**:
     - **Version**: 9.4.8
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
@@ -37,10 +37,10 @@ Tested on four environments.
   - **clang++**
     - **Version**: 18.1.5
     - **Options**: `-O2`
-  - **GHC**: 
+  - **GHC**:
     - **Version**: 9.4.8
     - **Options**: `-O2`
-  - **GHC (LLVM Backend)**: 
+  - **GHC (LLVM Backend)**:
     - **Version**: 9.4.8
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
@@ -55,10 +55,10 @@ Tested on four environments.
   - **clang++**
     - **Version**: 18.1.5
     - **Options**: `-O2`
-  - **GHC**: 
+  - **GHC**:
     - **Version**: 9.4.8
     - **Options**: `-O2`
-  - **GHC (LLVM Backend)**: 
+  - **GHC (LLVM Backend)**:
     - **Version**: 9.4.8
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.6)
@@ -73,10 +73,10 @@ Tested on four environments.
   - **g++**
     - **Version**: 14.0.1
     - **Options**: `-O2`
-  - **GHC**: 
+  - **GHC**:
     - **Version**: 9.4.8
     - **Options**: `-O2`
-  - **GHC (LLVM Backend)**: 
+  - **GHC (LLVM Backend)**:
     - **Version**: 9.4.8
     - **Options**: `-O2 -fllvm`
     - **Note**: Uses LLVM backend (version 14.0.5)
@@ -116,4 +116,3 @@ The results are the mean of 5 executions.
 |C++ (g++)|2.40|
 |Haskell (GHC, LLVM Backend)|2.40|
 |Haskell (GHC)|7.44|
-
