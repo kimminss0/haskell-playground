@@ -70,7 +70,7 @@ chooseDPFast n k
 
 -- O(n)
 chooseOptimal :: Int -> Int -> Maybe Int
-chooseOptimal n 1 = Just n
+chooseOptimal n 0 = Just 1
 chooseOptimal n k
   | n < 0 || k < 0 = Nothing
   | n < k = Nothing
