@@ -6,7 +6,7 @@
 uint64_t fib(long long);
 uint64_t fib1(long long, uint64_t, uint64_t);
 
-const uint64_t m = 4294967295UL;
+const uint64_t m = 18446744073709551557UL;
 
 int main(int argc, char *argv[]) {
   if (argc < 2)
