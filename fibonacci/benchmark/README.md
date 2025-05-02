@@ -24,7 +24,7 @@ Tested on four environments.
     - **Options**: `-O2`
   - **GHC (LLVM Backend)**:
     - **Version**: 9.4.8
-    - **Options**: `-O2 -fllvm`
+    - **Options**: `-O2 -fllvm -pgmlc=llc -pgmlo=opt`
     - **Note**: Uses LLVM backend (version 14.0.6)
 
 ### FreeBSD, AMD64 (Ryzen 5 PRO 4650U, 32 GB RAM)
@@ -53,19 +53,19 @@ Tested on four environments.
 - **RAM**: 8 GB
 - **Compiler**
   - **clang++**
-    - **Version**: 18.1.5
+    - **Version**: 18.1.6
     - **Options**: `-O2`
   - **GHC**:
     - **Version**: 9.4.8
     - **Options**: `-O2`
   - **GHC (LLVM Backend)**:
     - **Version**: 9.4.8
-    - **Options**: `-O2 -fllvm`
+    - **Options**: `-O2 -fllvm -pgmlc=llc14 -pgmlo=opt14`
     - **Note**: Uses LLVM backend (version 14.0.6)
 
 ### Linux, AMD64 (Ryzen 7 PRO 2700U, 8 GB RAM)
 
-- **OS**: Fedora 40 (Linux Kernel 6.8.5)
+- **OS**: Debian 12 (Linux Kernel 6.1.0)
 - **Processor**: AMD Ryzen 7 PRO 2700U
 - **Architecture**: AMD64
 - **RAM**: 8 GB
@@ -78,7 +78,7 @@ Tested on four environments.
     - **Options**: `-O2`
   - **GHC (LLVM Backend)**:
     - **Version**: 9.4.8
-    - **Options**: `-O2 -fllvm`
+    - **Options**: `-O2 -fllvm -pgmlc=llc-14 -pgmlo=opt-14`
     - **Note**: Uses LLVM backend (version 14.0.5)
 
 ## Result
@@ -93,8 +93,6 @@ The results are the mean of 5 executions.
 |Haskell (GHC, LLVM Backend)|0.90|
 |Haskell (GHC)|3.86|
 
-> **Note:** Haskell (GHC w/ LLVM BE) outperforms C++ (clang++).
-
 ### FreeBSD, AMD64 (Ryzen 5 PRO 4650U, 32 GB RAM)
 
 |Language (Compiler Used)|Execution Time (ms)|
@@ -103,17 +101,13 @@ The results are the mean of 5 executions.
 |Haskell (GHC, LLVM Backend)|0.76|
 |Haskell (GHC)|7.04|
 
-> **Note:** Haskell (GHC w/ LLVM BE) outperforms C++ (clang++).
-
 ### FreeBSD, AMD64 (Ryzen 7 PRO 2700U, 8 GB RAM)
-
-> **TODO:** Update
 
 |Language (Compiler Used)|Execution Time (ms)|
 |------------------------|-------------------|
-|C++ (clang++)|~2.39~|
-|Haskell (GHC, LLVM Backend)|~2.40~|
-|Haskell (GHC)|~7.44~|
+|C++ (clang++)|0.88|
+|Haskell (GHC, LLVM Backend)|0.81|
+|Haskell (GHC)|7.44|
 
 ### Linux, AMD64 (Ryzen 7 PRO 2700U, 8 GB RAM)
 
@@ -123,4 +117,8 @@ The results are the mean of 5 executions.
 |Haskell (GHC, LLVM Backend)|0.829|
 |Haskell (GHC)|7.44|
 
-> **Note:** Haskell (GHC w/ LLVM BE) outperforms C++ (g++).
+## Summary
+
+- Haskell (GHC w/ LLVM BE) outperformed C++ (clang++/g++) in all cases.
+- Haskell (GHC w/ native BE) was the least performant.
+
