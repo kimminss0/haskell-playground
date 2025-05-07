@@ -19,5 +19,5 @@ fib n = fib' n 0 1
   where
     fib' :: Int -> Word64 -> Word64 -> Word64
     fib' 0 !a !_ = a
-    fib' !k !a !b = fib' (k - 1) (b `mod` m) ((a + b) `mod` m)
+    fib' k !a !b = fib' (k - 1) (b `mod` m) ((a + b) `mod` m)
     m = 18446744073709551557 :: Word64

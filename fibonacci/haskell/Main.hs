@@ -51,4 +51,4 @@ fib3 :: Int -> Int
 fib3 n = fib' n 0 1
   where
     fib' 0 !a !_ = a
-    fib' !k !a !b = fib' (k - 1) b (a + b)
+    fib' k !a !b = fib' (k - 1) b (a + b)
